@@ -3,7 +3,7 @@
         {
             "id": 1,
             "username": "default",
-            "avatar": "https://imgur.com/a/MeyYn2A", 
+            "avatar": "/images/hero/profile.png", 
             "weapon": "https://imgur.com/a/TicerNF",
             "password": "default",
             "currentStage": 0,

@@ -12,8 +12,8 @@ function Fight({playerData}) {
         .then(res => res.json())
         .then(data => setMonsters(data))
     },[])
-    console.log(playerData[0])
-    console.log(monsters[playerData.currentStage])
+    // console.log(playerData[0])
+    // console.log(monsters[playerData[0].currentStage])
 
     return (
         <div className='fight-background'>
