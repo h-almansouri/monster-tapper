@@ -3,14 +3,15 @@
         {
             "id": 1,
             "user-name": "default",
-            "avatar": "public/images/hero/profile.png", 
-            "weapon": "public/images/hero/axe.png",
+            "avatar": "https://imgur.com/a/MeyYn2A", 
+            "weapon": "https://imgur.com/a/TicerNF",
             "password": "default",
             "hero": [
                 {
                     "id": 1,
                     "damage": 10,
-                    "gold": 2000
+                    "gold": 2000,
+                    "image": "https://imgur.com/a/tAxGHfJ"
                 }
             ]
         }
@@ -19,61 +20,61 @@
         {
             "id": 1,
             "health-points": 100,
-            "image": "public/images/monsters/monster1.png",
+            "image": "https://imgur.com/a/hrvLfGy",
             "gold-drop": 20
         },
         {
             "id": 2,
             "health-points": 200,
-            "image": "public/images/monsters/monster2.png",
+            "image": "https://imgur.com/a/rgHo9FQ",
             "gold-drop": 30
         },
         {
             "id": 3,
             "health-points": 300,
-            "image": "public/images/monsters/monster3.png",
+            "image": "https://imgur.com/a/BqQZiEQ",
             "gold-drop": 40
         },
         {   
             "id": 4,
             "health-points": 400,
-            "image": "public/images/monsters/monster4.png",
+            "image": "https://imgur.com/a/jZPVtRI",
             "gold-drop": 50
         },
         {   
             "id": 5,
             "health-points": 400,
-            "image": "public/images/monsters/monster5.png",
+            "image": "https://imgur.com/a/BNBrTAe",
             "gold-drop": 50
         },
         {
             "id": 6,
             "health-points": 500,
-            "image": "public/images/monsters/monster6.png",
+            "image": "https://imgur.com/a/7EmWSRh",
             "gold-drop": 60
         },
         {
             "id": 7,
             "health-points": 500,
-            "image": "public/images/monsters/monster7.png",
+            "image": "https://imgur.com/YDWhila",
             "gold-drop": 60
         },
         {
             "id": 8,
             "health-points": 500,
-            "image": "public/images/monsters/monster8.png",
+            "image": "https://imgur.com/o2VcTgu",
             "gold-drop": 60
         },
         {
             "id": 9,
             "health-points": 500,
-            "image": "public/images/monsters/monster9.png",
+            "image": "https://imgur.com/BEodKaO",
             "gold-drop": 60
         },
         {
             "id": 10,
             "health-points": 500,
-            "image": "public/images/monsters/monster10.png",
+            "image": "https://imgur.com/QvY0Gop",
             "gold-drop": 60
         }
     ],
@@ -88,5 +89,22 @@
             "boss-health-reduction": 0.9,
             "cost": 500
         }
-    ]    
+    ],
+    "weapons": [
+        {
+            "id": 1,
+            "type": "sword",
+            "image": "https://imgur.com/a/TicerNF"
+        },
+        {
+            "id": 2,
+            "type": "axe",
+            "image": "https://imgur.com/a/W01IFkI"
+        },
+        {
+            "id": 3,
+            "type": "spear",
+            "image": "https://imgur.com/a/sHH2I6H"
+        }
+    ]
 }
