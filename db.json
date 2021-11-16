@@ -2,10 +2,11 @@
     "player" : [
         {
             "id": 1,
-            "user-name": "default",
+            "username": "default",
             "avatar": "https://imgur.com/a/MeyYn2A", 
             "weapon": "https://imgur.com/a/TicerNF",
             "password": "default",
+            "currentStage": 0,
             "hero": [
                 {
                     "id": 1,

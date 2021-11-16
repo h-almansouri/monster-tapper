@@ -29,7 +29,7 @@ function App() {
           <Profile />
         </Route>
       </Switch>
-      <Nav playerData={playerData}/>
+      {/* <Nav playerData={playerData}/> */}
     </div>
   );
 }

@@ -1,6 +1,12 @@
+import Nav from "./Nav"
+import StageInfo from "./StageInfo"
+
 function Upgrades() {
     return (
-        <div></div>
+        <div className='fight-background'>
+            <StageInfo />
+            <Nav />
+        </div>
     )
 }
 export default Upgrades

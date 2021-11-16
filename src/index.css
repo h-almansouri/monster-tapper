@@ -15,18 +15,22 @@ code {
 .fight-background {
   width: 100vw;
   height: 100vh;
-  /* background-image: url('https://www.desktopbackground.org/p/2013/09/09/636021_cartoon-scenery-backgrounds_964x507_h.png'); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-repeat: no-repeat;
   background-image: url('https://i.imgur.com/aWpgWCK.png');
   background-color: #ffffff;
-  background-size: contain;
+  background-size: cover;
 }
 
 .navbar {
   width: 100vw;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
+  bottom: 0;
 }
 
 .nav-item {
@@ -43,4 +47,34 @@ code {
   justify-content: center;
   align-items: center;
   width: 100px;
+}
+
+.formbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 70vh;
+  width: 35vw;
+  background-color: #ffffff;
+  z-index: 1000;
+  margin-bottom: 10%;
+}
+
+.prof-pic {
+  display: flex;
+  margin-top: 10%;
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  border-radius: 100%
+}
+
+.armory {
+  display: flex;
+}
+
+.input {
+  height: 30px;
+  width: 100%;
+  margin-bottom: 15px;
 }

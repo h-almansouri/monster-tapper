@@ -14,7 +14,6 @@ const linkStyles = {
 function Nav({playerData}) {
     return (
         <div className="navbar">
-            {/* <Fight playerData={playerData} /> */}
             <NavLink
                 className="nav-item"
                 to="/"
@@ -31,7 +30,7 @@ function Nav({playerData}) {
                 style={linkStyles}
                 activeStyle={{background: "blue"}}
             >
-                <img className="nav-img" src="./images/hero/upgrade.png" alt="Fight Logo" />
+                <img className="nav-img" src="./images/hero/upgrade.png" alt="Upgrades Logo" />
             </NavLink>
             <NavLink
                 className="nav-item"
@@ -40,7 +39,7 @@ function Nav({playerData}) {
                 style={linkStyles}
                 activeStyle={{background: "blue"}}
             >
-                <img className="nav-img" src="./images/hero/profile.png" alt="Fight Logo" />
+                <img className="nav-img" src="./images/hero/profile.png" alt="Profile Logo" />
             </NavLink>
         </div>
     )
