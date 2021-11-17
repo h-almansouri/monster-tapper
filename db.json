@@ -1,111 +1,111 @@
 {
-    "player" : [
+  "player": [
+    {
+      "id": 1,
+      "username": "default",
+      "avatar": "/images/hero/profile.png",
+      "weapon": "/images/hero/sword.png",
+      "password": "default",
+      "currentStage": 0,
+      "hero": [
         {
-            "id": 1,
-            "username": "default",
-            "avatar": "/images/hero/profile.png", 
-            "weapon": "https://imgur.com/a/TicerNF",
-            "password": "default",
-            "currentStage": 0,
-            "hero": [
-                {
-                    "id": 1,
-                    "damage": 10,
-                    "gold": 2000,
-                    "image": "https://imgur.com/a/tAxGHfJ"
-                }
-            ]
+          "id": 1,
+          "damage": 10,
+          "gold": 2000,
+          "image": "/images/hero/hero.png"
         }
-    ],
-    "monster": [
-        {
-            "id": 1,
-            "health-points": 100,
-            "image": "https://imgur.com/a/hrvLfGy",
-            "gold-drop": 20
-        },
-        {
-            "id": 2,
-            "health-points": 200,
-            "image": "https://imgur.com/a/rgHo9FQ",
-            "gold-drop": 30
-        },
-        {
-            "id": 3,
-            "health-points": 300,
-            "image": "https://imgur.com/a/BqQZiEQ",
-            "gold-drop": 40
-        },
-        {   
-            "id": 4,
-            "health-points": 400,
-            "image": "https://imgur.com/a/jZPVtRI",
-            "gold-drop": 50
-        },
-        {   
-            "id": 5,
-            "health-points": 400,
-            "image": "https://imgur.com/a/BNBrTAe",
-            "gold-drop": 50
-        },
-        {
-            "id": 6,
-            "health-points": 500,
-            "image": "https://imgur.com/a/7EmWSRh",
-            "gold-drop": 60
-        },
-        {
-            "id": 7,
-            "health-points": 500,
-            "image": "https://imgur.com/YDWhila",
-            "gold-drop": 60
-        },
-        {
-            "id": 8,
-            "health-points": 500,
-            "image": "https://imgur.com/o2VcTgu",
-            "gold-drop": 60
-        },
-        {
-            "id": 9,
-            "health-points": 500,
-            "image": "https://imgur.com/BEodKaO",
-            "gold-drop": 60
-        },
-        {
-            "id": 10,
-            "health-points": 500,
-            "image": "https://imgur.com/QvY0Gop",
-            "gold-drop": 60
-        }
-    ],
-    "upgrades": [
-        {
-            "id": 1,
-            "damage-multiplier": 2,
-            "cost": 100
-        },
-        {
-            "id": 2,
-            "boss-health-reduction": 0.9,
-            "cost": 500
-        }
-    ],
-    "weapons": [
-        {
-            "id": 1,
-            "type": "sword",
-            "image": "https://imgur.com/a/TicerNF"
-        },
-        {
-            "id": 2,
-            "type": "axe",
-            "image": "https://imgur.com/a/W01IFkI"
-        },
-        {
-            "id": 3,
-            "type": "spear",
-            "image": "https://imgur.com/a/sHH2I6H"
-        }
-    ]
+      ]
+    }
+  ],
+  "monster": [
+    {
+      "id": 1,
+      "hp": 100,
+      "image": "/images/monsters/monster1.png",
+      "goldDrop": 20
+    },
+    {
+      "id": 2,
+      "hp": 200,
+      "image": "https://imgur.com/a/rgHo9FQ",
+      "goldDrop": 30
+    },
+    {
+      "id": 3,
+      "hp": 300,
+      "image": "https://imgur.com/a/BqQZiEQ",
+      "goldDrop": 40
+    },
+    {
+      "id": 4,
+      "hp": 400,
+      "image": "https://imgur.com/a/jZPVtRI",
+      "goldDrop": 50
+    },
+    {
+      "id": 5,
+      "hp": 400,
+      "image": "https://imgur.com/a/BNBrTAe",
+      "goldDrop": 50
+    },
+    {
+      "id": 6,
+      "hp": 500,
+      "image": "https://imgur.com/a/7EmWSRh",
+      "goldDrop": 60
+    },
+    {
+      "id": 7,
+      "hp": 500,
+      "image": "https://imgur.com/YDWhila",
+      "goldDrop": 60
+    },
+    {
+      "id": 8,
+      "hp": 500,
+      "image": "https://imgur.com/o2VcTgu",
+      "goldDrop": 60
+    },
+    {
+      "id": 9,
+      "hp": 500,
+      "image": "https://imgur.com/BEodKaO",
+      "goldDrop": 60
+    },
+    {
+      "id": 10,
+      "hp": 500,
+      "image": "https://imgur.com/QvY0Gop",
+      "goldDrop": 60
+    }
+  ],
+  "upgrades": [
+    {
+      "id": 1,
+      "damage-multiplier": 2,
+      "cost": 100
+    },
+    {
+      "id": 2,
+      "boss-health-reduction": 0.9,
+      "cost": 500
+    }
+  ],
+  "weapons": [
+    {
+      "id": 1,
+      "type": "sword",
+      "image": "https://imgur.com/a/TicerNF"
+    },
+    {
+      "id": 2,
+      "type": "axe",
+      "image": "https://imgur.com/a/W01IFkI"
+    },
+    {
+      "id": 3,
+      "type": "spear",
+      "image": "https://imgur.com/a/sHH2I6H"
+    }
+  ]
 }

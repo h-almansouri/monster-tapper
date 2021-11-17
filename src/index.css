@@ -66,7 +66,12 @@ code {
   height: 100px;
   width: 100px;
   border: 1px solid black;
-  border-radius: 100%
+  border-radius: 100%;
+  overflow: hidden;
+  text-align: center;
+  /* background-image: url('https://cdn.discordapp.com/attachments/900501298049347625/910072991717670932/cd850e057237e7dff105eb8a3c03ea4d_adobespark.png'); */
+  /* background-color: red; */
+  /* background-size: cover; */
 }
 
 .armory {
@@ -77,4 +82,133 @@ code {
   height: 30px;
   width: 100%;
   margin-bottom: 15px;
+}
+
+.stage-info {
+  display: flex;
+  position: absolute;
+  font-size: 30px;
+  font-weight: 500;
+  color: #ffdb00;
+  width: 75vw;
+  top: 40px;
+  left: 10%;
+  justify-content: space-between;
+}
+
+.gold {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  right: 80px;
+  margin-top: 7px;
+}
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://cdn.discordapp.com/attachments/900501298049347625/910313518018994196/loginpage.gif');
+  background-repeat: no-repeat;
+  /* background-color: red; */
+  background-size: cover;
+}
+
+.player {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 15%;
+  transform: translateX(0px);
+  height: 35vh;
+}
+
+.weapon {
+  position: absolute;
+  height: 20vh;
+  right: 45%;
+  margin-top: 35px;
+}
+
+.monster {
+  display: flex;
+  flex-direction: column;
+  transform: translateX(0px);
+  width: 65vh;
+}
+
+.monster:active {
+  animation: 0.1s shake;
+  animation-delay: 500ms;
+}
+
+.hp-outer {
+  height: 25px;
+  width: 200px;
+  margin-left: 40%;
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.hp-inner {
+  background-color: red;
+  height: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: 0px solid black;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 0%;
+  }
+  to {
+    margin-left: 10%;
+  }
+}
+
+.shake {
+  animation: shake 0.3s;
+  animation-iteration-count: 1;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(3px, 0px);
+  }
+  10% {
+    transform: translate(-3px, 0px);
+  }
+  20% {
+    transform: translate(-5px, 0px);
+  }
+  30% {
+    transform: translate(5px, 0px);
+  }
+  40% {
+    transform: translate(3px, 0px);
+  }
+  50% {
+    transform: translate(-3px, 0px);
+  }
+  60% {
+    transform: translate(-5px, 0px);
+  }
+  70% {
+    transform: translate(5px, 0px);
+  }
+  80% {
+    transform: translate(-3px, 0px);
+  }
+  90% {
+    transform: translate(3px, 0px);
+  }
+  100% {
+    transform: translate(3px, 0px);
+  }
 }

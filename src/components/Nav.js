@@ -16,7 +16,7 @@ function Nav({playerData}) {
         <div className="navbar">
             <NavLink
                 className="nav-item"
-                to="/"
+                to="/fight"
                 exact
                 style={linkStyles}
                 activeStyle={{background: "blue"}}

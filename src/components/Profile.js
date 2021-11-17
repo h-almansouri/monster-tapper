@@ -1,8 +1,10 @@
 import { useState } from "react"
+import { useHistory } from "react-router"
 import Nav from "./Nav"
 
 function Profile({playerData, setPlayerData, updatedInfo, setUpdatedInfo}) {
     // console.log(updatedInfo)
+    const history = useHistory()
     if (playerData.length > 0) {
         const {id} = playerData[0]
         const {username, avatar} = updatedInfo
@@ -26,7 +28,7 @@ function Profile({playerData, setPlayerData, updatedInfo, setUpdatedInfo}) {
         return (
             <div className='fight-background'>
                 <div className='formbox'>
-                    <img className='prof-pic' alt='Profile Pic' src={playerData[0].avatar}/>
+                    <img className='prof-pic' alt='Broken image link' src={avatar} />
                     <br />
                     <form className='prof-form' onSubmit={e => handleSubmit(e)}>
                         <h3>Username</h3>
@@ -69,9 +71,9 @@ function Profile({playerData, setPlayerData, updatedInfo, setUpdatedInfo}) {
             </div>
         )
     } else {
-        window.history.back()
+        history.push('/')
         console.log('dne')
-        return(<div></div>)
+        return null
     }
 }
 export default Profile

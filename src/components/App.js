@@ -4,6 +4,7 @@ import Nav from "./Nav";
 import {Route, Switch} from "react-router-dom"
 import Upgrades from "./Upgrades";
 import Profile from "./Profile";
+import Login from "./Login";
 import Player from "./Player";
 
 function App() {
@@ -28,10 +29,13 @@ function App() {
     <div className="App">
       <Switch>
         <Route exact path="/">
-          <Fight playerData={playerData}/>
+          <Login />
+        </Route>
+        <Route exact path="/fight">
+          <Fight playerData={playerData} setPlayerData={setPlayerData}/>
         </Route>
         <Route exact path="/upgrades">
-          <Upgrades />
+          <Upgrades playerData={playerData} />
         </Route>
         <Route exact path="/profile">
           <Profile 
