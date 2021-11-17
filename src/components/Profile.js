@@ -3,14 +3,12 @@ import { useHistory } from "react-router"
 import Nav from "./Nav"
 
 function Profile({playerData, setPlayerData, updatedInfo, setUpdatedInfo}) {
-    // console.log(updatedInfo)
     const history = useHistory()
     if (playerData.length > 0) {
         const {id} = playerData[0]
         const {username, avatar} = updatedInfo
 
         function handleChange(e) {
-            // console.log(e.target.value)
             setUpdatedInfo({...updatedInfo, [e.target.name] : e.target.value})
         }
 

@@ -11,7 +11,7 @@ const linkStyles = {
     background: 'lightblue'
 }
 
-function Nav({playerData}) {
+function Nav() {
     return (
         <div className="navbar">
             <NavLink

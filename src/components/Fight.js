@@ -4,12 +4,15 @@ import Nav from "./Nav"
 import Player from "./Player"
 import StageInfo from "./StageInfo"
 
-function Fight({playerData, setPlayerData}) {
+function Fight({playerData, setPlayerData, currGold, setCurrGold, currStage, setCurrStage}) {
     const {id} = playerData
     const [monsters, setMonsters] = useState([])
     const [isAttacking, setIsAttacking] = useState(false)
     const [shake, setShake] = useState(false)
-    const [currGold, setCurrGold] = useState(playerData[0].hero[0].gold)
+    // const [currGold, setCurrGold] = useState(playerData[0].hero[0].gold)
+    const [deathCount, setDeathCount] = useState(0)
+    // const [currStage, setCurrStage] = useState(playerData[0].currentStage)
+    
 
     useEffect(() => {
         fetch('http://localhost:3000/monster')
@@ -32,10 +35,10 @@ function Fight({playerData, setPlayerData}) {
     }
     
 
-    if (playerData.length > 0 && monsters.length > 0) {
+    if (monsters.length > 0) {
         return (
             <div className='fight-background'>
-                <StageInfo playerData={playerData} currGold={currGold}/>
+                <StageInfo playerData={playerData} currGold={currGold} currStage={currStage} />
                 <Monster 
                     monsters={monsters} 
                     playerData={playerData} 
@@ -44,6 +47,10 @@ function Fight({playerData, setPlayerData}) {
                     stopShake={stopShake} 
                     patchPlayerData={patchPlayerData}
                     setCurrGold={setCurrGold}
+                    deathCount={deathCount}
+                    setDeathCount={setDeathCount}
+                    currStage={currStage}
+                    setCurrStage={setCurrStage}
                      />
                 <Player 
                     playerData={playerData} 
@@ -53,7 +60,7 @@ function Fight({playerData, setPlayerData}) {
             </div>
         )
     } else {
-        return null;
+        return <div className='fight-background'></div>;
     }
 }
 

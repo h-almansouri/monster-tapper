@@ -6,7 +6,7 @@
       "avatar": "/images/hero/profile.png",
       "weapon": "/images/hero/sword.png",
       "password": "default",
-      "currentStage": 0,
+      "currentStage": 1,
       "hero": [
         {
           "id": 1,
@@ -27,55 +27,55 @@
     {
       "id": 2,
       "hp": 200,
-      "image": "https://imgur.com/a/rgHo9FQ",
+      "image": "/images/monsters/monster2.png",
       "goldDrop": 30
     },
     {
       "id": 3,
       "hp": 300,
-      "image": "https://imgur.com/a/BqQZiEQ",
+      "image": "/images/monsters/monster3.png",
       "goldDrop": 40
     },
     {
       "id": 4,
       "hp": 400,
-      "image": "https://imgur.com/a/jZPVtRI",
+      "image": "/images/monsters/monster4.png",
       "goldDrop": 50
     },
     {
       "id": 5,
       "hp": 400,
-      "image": "https://imgur.com/a/BNBrTAe",
+      "image": "/images/monsters/monster5.png",
       "goldDrop": 50
     },
     {
       "id": 6,
       "hp": 500,
-      "image": "https://imgur.com/a/7EmWSRh",
+      "image": "/images/monsters/monster6.png",
       "goldDrop": 60
     },
     {
       "id": 7,
       "hp": 500,
-      "image": "https://imgur.com/YDWhila",
+      "image": "/images/monsters/monster7.png",
       "goldDrop": 60
     },
     {
       "id": 8,
       "hp": 500,
-      "image": "https://imgur.com/o2VcTgu",
+      "image": "/images/monsters/monster8.png",
       "goldDrop": 60
     },
     {
       "id": 9,
       "hp": 500,
-      "image": "https://imgur.com/BEodKaO",
+      "image": "/images/monsters/monster9.png",
       "goldDrop": 60
     },
     {
       "id": 10,
       "hp": 500,
-      "image": "https://imgur.com/QvY0Gop",
+      "image": "/images/monsters/monster10.png",
       "goldDrop": 60
     }
   ],

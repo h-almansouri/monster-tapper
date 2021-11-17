@@ -11,6 +11,8 @@ function App() {
   const Url = 'http://localhost:3000/player'
   const [playerData, setPlayerData] = useState([])
   const [updatedInfo, setUpdatedInfo] = useState({})
+  const [currGold, setCurrGold] = useState()
+  const [currStage, setCurrStage] = useState()
 
   useEffect(() => {
     fetch(Url)
@@ -22,6 +24,8 @@ function App() {
         avatar: data[0].avatar,
         weapon: data[0].weapon
       })
+      setCurrGold(data[0].hero[0].gold)
+      setCurrStage(data[0].currentStage)
     })
   }, [])
 
@@ -33,10 +37,16 @@ function App() {
             <Login />
           </Route>
           <Route exact path="/fight">
-            <Fight playerData={playerData} setPlayerData={setPlayerData}/>
+            <Fight 
+              playerData={playerData} 
+              setPlayerData={setPlayerData} 
+              currGold={currGold} 
+              setCurrGold={setCurrGold} 
+              currStage={currStage} 
+              setCurrStage={setCurrStage} />
           </Route>
           <Route exact path="/upgrades">
-            <Upgrades playerData={playerData} />
+            <Upgrades playerData={playerData} currGold={currGold} setCurrGold={setCurrGold} currStage={currStage} />
           </Route>
           <Route exact path="/profile">
             <Profile 

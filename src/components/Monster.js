@@ -1,24 +1,49 @@
 import { useEffect } from "react"
 import { useState } from "react/cjs/react.development"
 
-function Monster({monsters, playerData, patchPlayerData, handleAttack, stopShake, shake, setCurrGold}) {
-    const {currentStage, hero} = playerData[0]
-    const [currMonster, setCurrMonster] = useState(monsters[currentStage])
-    const [hp, setHp] = useState(100)
-    // console.log(((hp-50) / currMonster.hp)*100)
+function Monster({
+    monsters, 
+    playerData, 
+    patchPlayerData, 
+    handleAttack, 
+    stopShake, 
+    shake, 
+    setCurrGold, 
+    deathCount, 
+    setDeathCount,
+    currStage,
+    setCurrStage
+    }) {
+    const {hero} = playerData[0]
+    // const [currStage, setCurrStage] = useState(playerata[0].currentStage + 1)
+    const [currMonster, setCurrMonster] = useState(monsters[Math.floor(currStage/5)])
+    const [hp, setHp] = useState(monsters[Math.floor(currStage/5)].hp)
 
     if (monsters.length > 0 && currMonster != undefined) {
-        // setCurrMonster(monsters[currentStage])
-        // setHp(monsters[currentStage].hp)
-
         function handleClick() {
             handleAttack()
-            console.log(hp)
+            // console.log(hp)
             setHp(hp => hp - hero[0].damage)
             if (hp <= 0 || hp <= hero[0].damage) {
                 console.log('dead')
+                if (deathCount < 4) {
+                    setDeathCount(deathCount => deathCount + 1)
+                } else {
+                    setDeathCount(0)
+                }
+                setCurrStage(currStage => currStage + 1)
+                // setCurrMonster(currMonster => monsters[Math.floor(currStage/5)])
+                // setHp(currMonster.hp)
                 patchGold()
+                fetch(`http://localhost:3000/player/${playerData[0].id}`, {
+                    method: 'PATCH',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({currentStage: currStage + 1})
+                })
+                console.log('currStage:' + currStage)
+                console.log('math floor:' + Math.floor(currStage/5))
             }
+            console.log('hp:' + hp)
         }
     
         function patchGold() {
@@ -35,9 +60,9 @@ function Monster({monsters, playerData, patchPlayerData, handleAttack, stopShake
             .then(res => res.json())
             .then(data => {
                 patchPlayerData(data)
-                setCurrMonster(monsters[currentStage])
+                setCurrMonster(monsters[Math.floor(currStage/5)])
                 setCurrGold(hero[0].gold + currMonster.goldDrop)
-                setHp(currMonster.hp)
+                setHp(monsters[Math.floor(currStage/5)].hp)
                 // window.location.reload()
             })
         }
