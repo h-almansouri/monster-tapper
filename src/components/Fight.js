@@ -9,7 +9,7 @@ function Fight({playerData, setPlayerData}) {
     const [monsters, setMonsters] = useState([])
     const [isAttacking, setIsAttacking] = useState(false)
     const [shake, setShake] = useState(false)
-    const [currGold, setCurrGold] = useState(playerData.length > 0 ? playerData[0].hero[0].gold : 2000)
+    const [currGold, setCurrGold] = useState(playerData[0].hero[0].gold)
 
     useEffect(() => {
         fetch('http://localhost:3000/monster')
@@ -32,7 +32,7 @@ function Fight({playerData, setPlayerData}) {
     }
     
 
-    if (playerData.length > 0) {
+    if (playerData.length > 0 && monsters.length > 0) {
         return (
             <div className='fight-background'>
                 <StageInfo playerData={playerData} currGold={currGold}/>

@@ -24,30 +24,35 @@ function App() {
       })
     })
   }, [])
+
+  if (playerData.length > 0) {
+    return (
+      <div className="App">
+        <Switch>
+          <Route exact path="/">
+            <Login />
+          </Route>
+          <Route exact path="/fight">
+            <Fight playerData={playerData} setPlayerData={setPlayerData}/>
+          </Route>
+          <Route exact path="/upgrades">
+            <Upgrades playerData={playerData} />
+          </Route>
+          <Route exact path="/profile">
+            <Profile 
+              playerData={playerData} 
+              setPlayerData={setPlayerData} 
+              updatedInfo={updatedInfo} 
+              setUpdatedInfo={setUpdatedInfo} />
+          </Route>
+        </Switch>
+        {/* <Nav playerData={playerData}/> */}
+      </div>
+    );
+  } else {
+    return null
+  }
   
-  return (
-    <div className="App">
-      <Switch>
-        <Route exact path="/">
-          <Login />
-        </Route>
-        <Route exact path="/fight">
-          <Fight playerData={playerData} setPlayerData={setPlayerData}/>
-        </Route>
-        <Route exact path="/upgrades">
-          <Upgrades playerData={playerData} />
-        </Route>
-        <Route exact path="/profile">
-          <Profile 
-            playerData={playerData} 
-            setPlayerData={setPlayerData} 
-            updatedInfo={updatedInfo} 
-            setUpdatedInfo={setUpdatedInfo} />
-        </Route>
-      </Switch>
-      {/* <Nav playerData={playerData}/> */}
-    </div>
-  );
 }
 
 export default App;
