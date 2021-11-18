@@ -26,6 +26,8 @@ function App() {
   const [updatedInfo, setUpdatedInfo] = useState({})
   const [currGold, setCurrGold] = useState()
   const [currStage, setCurrStage] = useState()
+  const [currDamage, setCurrDamage] = useState()
+  const [goldMultiplier, setGoldMultiplier] = useState(1)
 
   useEffect(() => {
     console.log(playerData)
@@ -64,7 +66,15 @@ function App() {
               setCurrStage={setCurrStage} />
           </Route>
           <Route exact path="/upgrades">
-            <Upgrades playerData={playerData} currGold={currGold} setCurrGold={setCurrGold} currStage={currStage} />
+            <Upgrades 
+              playerData={playerData} 
+              currStage={currStage}
+              setPlayerData={setPlayerData} 
+              currGold={currGold} 
+              setCurrGold={setCurrGold}
+              currDamage={currDamage}
+              setCurrDamage={setCurrDamage}
+              />
           </Route>
           <Route exact path="/profile">
             <Profile 

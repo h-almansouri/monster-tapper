@@ -10,6 +10,7 @@
       "currentStage": 1,
       "damage": 10,
       "gold": 2000,
+      "goldMultiplier": 1,
       "image": "/images/hero/hero.png"
     },
     {
@@ -64,50 +65,54 @@
     },
     {
       "id": 5,
-      "hp": 400,
+      "hp": 500,
       "image": "/images/monsters/monster5.png",
-      "goldDrop": 50
+      "goldDrop": 60
     },
     {
       "id": 6,
-      "hp": 500,
+      "hp": 600,
       "image": "/images/monsters/monster6.png",
-      "goldDrop": 60
+      "goldDrop": 70
     },
     {
       "id": 7,
-      "hp": 500,
+      "hp": 700,
       "image": "/images/monsters/monster7.png",
-      "goldDrop": 60
+      "goldDrop": 80
     },
     {
       "id": 8,
-      "hp": 500,
+      "hp": 800,
       "image": "/images/monsters/monster8.png",
-      "goldDrop": 60
+      "goldDrop": 90
     },
     {
       "id": 9,
-      "hp": 500,
+      "hp": 900,
       "image": "/images/monsters/monster9.png",
-      "goldDrop": 60
+      "goldDrop": 100
     },
     {
       "id": 10,
-      "hp": 500,
+      "hp": 1000,
       "image": "/images/monsters/monster10.png",
-      "goldDrop": 60
+      "goldDrop": 110
     }
   ],
   "upgrades": [
     {
       "id": 1,
-      "damageMultiplier": 2,
+      "name": "Damage Multiplier",
+      "description": "Multiplies your damage by 20% forever",
+      "multiplier": 1.2,
       "cost": 100
     },
     {
       "id": 2,
-      "goldMultiplier": 2,
+      "name": "Gold Multiplier",
+      "description": "Multiplies your gold drops by 20% forever",
+      "multiplier": 1.2,
       "cost": 200
     }
   ],

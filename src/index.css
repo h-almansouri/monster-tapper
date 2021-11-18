@@ -213,6 +213,37 @@ code {
   border: 0px solid black;
 }
 
+.upgrade-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 5%;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 70vw;
+  height: 100px;
+  background-image: url(https://cdn.discordapp.com/attachments/900501298049347625/910663517688987668/2173386-tra-textur-bakgrund-gratis-vector.jpg);
+}
+
+.upgrade-detail {
+  margin-left: 20px;
+  margin-right: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.upgrade-card button {
+  height: 30px;
+  color: black;
+  font-weight: 600;
+  border-radius: 10px;
+  background-color: #ffdb00;
+}
+
+.upgrade-card p {
+  font-weight: 700;
+}
+
 @keyframes slidein {
   from {
     margin-left: 0%;
