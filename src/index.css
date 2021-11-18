@@ -109,12 +109,54 @@ code {
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-image: url('https://cdn.discordapp.com/attachments/900501298049347625/910313518018994196/loginpage.gif');
   background-repeat: no-repeat;
   /* background-color: red; */
   background-size: cover;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form input {
+  /* margin-top: 15px; */
+  margin-bottom: 15px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.login-btn {
+  height: 30px;
+  width: 70px;
+  border-radius: 25px;
+}
+
+.login-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40vw;
+  height: 40vh;
+  border-radius: 35px;
+  background-image: url('https://cdn.discordapp.com/attachments/900501298049347625/910663517688987668/2173386-tra-textur-bakgrund-gratis-vector.jpg');
+}
+
+.signup-link {
+  height: 30px;
+  width: 250px;
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+  background-color: grey;
+  border-radius: 10px;
 }
 
 .player {

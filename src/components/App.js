@@ -4,8 +4,10 @@ import Nav from "./Nav";
 import {Route, Switch} from "react-router-dom"
 import Upgrades from "./Upgrades";
 import Profile from "./Profile";
-import Login from "./Login";
+import Start from "./Start";
 import Player from "./Player";
+import Login from "./Login";
+import Signup from "./Signup";
 
 function App() {
   const Url = 'http://localhost:3000/player'
@@ -34,7 +36,13 @@ function App() {
       <div className="App">
         <Switch>
           <Route exact path="/">
+            <Start />
+          </Route>
+          <Route exact path="/login">
             <Login />
+          </Route>
+          <Route exact path="/signup">
+            <Signup />
           </Route>
           <Route exact path="/fight">
             <Fight 

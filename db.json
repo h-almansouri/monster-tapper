@@ -82,14 +82,20 @@
   "upgrades": [
     {
       "id": 1,
-      "damage-multiplier": 2,
+      "damageMultiplier": 2,
       "cost": 100
     },
     {
       "id": 2,
-      "boss-health-reduction": 0.9,
+      "bossHealthReduction": 0.9,
       "cost": 500
+    },
+    {
+      "id": 3,
+      "goldMultiplier": 2,
+      "cost": 200
     }
+
   ],
   "weapons": [
     {
