@@ -10,7 +10,7 @@ import Login from "./Login";
 import Signup from "./Signup";
 
 function App() {
-  const Url = 'http://localhost:3000/player'
+  const Url = 'http://localhost:3000/users'
   const [playerData, setPlayerData] = useState([])
   const [updatedInfo, setUpdatedInfo] = useState({})
   const [currGold, setCurrGold] = useState()
@@ -26,7 +26,7 @@ function App() {
         avatar: data[0].avatar,
         weapon: data[0].weapon
       })
-      setCurrGold(data[0].hero[0].gold)
+      setCurrGold(data[0].gold)
       setCurrStage(data[0].currentStage)
     })
   }, [])

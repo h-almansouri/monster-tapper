@@ -1,20 +1,16 @@
 {
-  "player": [
+  "users": [
     {
       "id": 1,
       "username": "default",
+      "email": "defualtEmail@mail.com",
+      "password": "default",
       "avatar": "/images/hero/profile.png",
       "weapon": "/images/hero/sword.png",
-      "password": "default",
       "currentStage": 1,
-      "hero": [
-        {
-          "id": 1,
-          "damage": 10,
-          "gold": 2000,
-          "image": "/images/hero/hero.png"
-        }
-      ]
+      "damage": 10,
+      "gold": 2000,
+      "image": "/images/hero/hero.png"
     }
   ],
   "monster": [
@@ -95,7 +91,6 @@
       "goldMultiplier": 2,
       "cost": 200
     }
-
   ],
   "weapons": [
     {

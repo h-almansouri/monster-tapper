@@ -14,7 +14,6 @@ function Monster({
     currStage,
     setCurrStage
     }) {
-    const {hero} = playerData[0]
     // const [currStage, setCurrStage] = useState(playerata[0].currentStage + 1)
     const [currMonster, setCurrMonster] = useState(monsters[Math.floor(currStage/5)])
     const [hp, setHp] = useState(monsters[Math.floor(currStage/5)].hp)
@@ -23,8 +22,8 @@ function Monster({
         function handleClick() {
             handleAttack()
             // console.log(hp)
-            setHp(hp => hp - hero[0].damage)
-            if (hp <= 0 || hp <= hero[0].damage) {
+            setHp(hp => hp - playerData[0].damage)
+            if (hp <= 0 || hp <= playerData[0].damage) {
                 console.log('dead')
                 if (deathCount < 4) {
                     setDeathCount(deathCount => deathCount + 1)
@@ -35,7 +34,7 @@ function Monster({
                 // setCurrMonster(currMonster => monsters[Math.floor(currStage/5)])
                 // setHp(currMonster.hp)
                 patchGold()
-                fetch(`http://localhost:3000/player/${playerData[0].id}`, {
+                fetch(`http://localhost:3000/users/${playerData[0].id}`, {
                     method: 'PATCH',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify({currentStage: currStage + 1})
@@ -47,21 +46,27 @@ function Monster({
         }
     
         function patchGold() {
-            fetch(`http://localhost:3000/player/${playerData[0].id}`, {
+            fetch(`http://localhost:3000/users/${playerData[0].id}`, {
                 method: 'PATCH',
                 headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({hero:[{
-                    id: hero[0].id,
-                    damage: hero[0].damage,
-                    gold : hero[0].gold + currMonster.goldDrop,
-                    image: hero[0].image
-                }]})
+                body: JSON.stringify({
+                    id: playerData[0].id,
+                    username: playerData[0].username,
+                    email: playerData[0].email,
+                    password: playerData[0].password,
+                    avatar: playerData[0].avatar,
+                    weapon: playerData[0].weapon,
+                    currentStage: playerData[0].currentStage,
+                    damage: playerData[0].damage,
+                    gold: playerData[0].gold + currMonster.goldDrop,
+                    image: playerData[0].image
+                  })
             })
             .then(res => res.json())
             .then(data => {
                 patchPlayerData(data)
                 setCurrMonster(monsters[Math.floor(currStage/5)])
-                setCurrGold(hero[0].gold + currMonster.goldDrop)
+                setCurrGold(playerData[0].gold + currMonster.goldDrop)
                 setHp(monsters[Math.floor(currStage/5)].hp)
                 // window.location.reload()
             })
