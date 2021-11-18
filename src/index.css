@@ -75,6 +75,13 @@ code {
   /* background-size: cover; */
 }
 
+.logout-btn {
+  display: flex;
+  position: absolute;
+  margin-left: 22%;
+  margin-top: 2%;
+}
+
 .armory {
   display: flex;
 }

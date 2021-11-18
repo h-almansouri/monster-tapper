@@ -9,9 +9,7 @@ function Fight({playerData, setPlayerData, currGold, setCurrGold, currStage, set
     const [monsters, setMonsters] = useState([])
     const [isAttacking, setIsAttacking] = useState(false)
     const [shake, setShake] = useState(false)
-    // const [currGold, setCurrGold] = useState(playerData[0].hero[0].gold)
     const [deathCount, setDeathCount] = useState(0)
-    // const [currStage, setCurrStage] = useState(playerData[0].currentStage)
     
 
     useEffect(() => {
@@ -31,7 +29,7 @@ function Fight({playerData, setPlayerData, currGold, setCurrGold, currStage, set
     }
 
     function patchPlayerData(data) {
-        setPlayerData([data])
+        setPlayerData(data)
     }
     
 
