@@ -19,8 +19,6 @@ function Monster({
     const [currMonster, setCurrMonster] = useState(monsters[randomNum])
     const scaledHp = currMonster.hp + hpScaler
     const [hp, setHp] = useState(scaledHp)
-    console.log('scaledHp:' + scaledHp)
-    console.log('hp:' + hp)
 
     if (monsters.length > 0 && currMonster != undefined) {
         function handleClick() {
@@ -32,7 +30,6 @@ function Monster({
                 } else {
                     setDeathCount(0)
                 }
-                // setCurrStage(currStage => currStage + 1)
                 fetch(`http://localhost:3000/users/${playerData.id}`, {
                     method: 'PATCH',
                     headers: {'Content-Type': 'application/json'},
