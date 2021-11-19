@@ -1,4 +1,4 @@
-import { NavLink, Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { useState } from "react/cjs/react.development"
 import { useHistory } from "react-router";
 
@@ -8,6 +8,7 @@ function Login({setPlayerData}) {
         email: '',
         password: ''
     })
+    const [showPassword, setShowPassword] = useState(false)
 
     function handleSubmit(e) {
         e.preventDefault()
@@ -28,7 +29,6 @@ function Login({setPlayerData}) {
     }
 
     function handleChange(e) {
-        console.log(e.target.value)
         setFormData({...formData, [e.target.name] : e.target.value})
     }
 
@@ -36,11 +36,15 @@ function Login({setPlayerData}) {
         <div className='login'>
             <div className='login-back'>
                 <form className='login-form' onSubmit={e => handleSubmit(e)}>
-                    <input type='text' value={formData.email} placeholder='Email' name='email' onChange={e => handleChange(e)} ></input>
-                    <input type='text' value={formData.password} placeholder='Password' name='password' onChange={e => handleChange(e)} ></input>
-                    {/* <Link className='login-btn' to="/fight"> */}
-                        <button className='login-btn' type='submit'>Login</button>
-                    {/* </Link> */}
+                    <input type='text' p value={formData.email} placeholder='Email' name='email' onChange={e => handleChange(e)} ></input>
+                    <div>
+                        <input type={showPassword ? 'text' : 'password'} value={formData.password} placeholder='Password' name='password' onChange={e => handleChange(e)} ></input>
+                        {showPassword ?
+                            <img className='show-password' onClick={() => setShowPassword(!showPassword)} src='https://cdn.discordapp.com/attachments/900501298049347625/911135105140015134/2072011.png' /> :
+                            <img className='show-password' onClick={() => setShowPassword(!showPassword)} src='https://cdn.discordapp.com/attachments/900501298049347625/911135116607234078/2072008.png' />
+                        }
+                    </div>
+                    <button className='login-btn' type='submit'>Login</button>
                 </form>
                 <NavLink className='signup-link' exact to='/signup'>Don't have an account? Sign Up</NavLink>
             </div>

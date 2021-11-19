@@ -1,5 +1,4 @@
-import { useEffect } from "react"
-import { useState } from "react/cjs/react.development"
+import { useState } from "react"
 
 function Monster({
     monsters, 
@@ -14,17 +13,14 @@ function Monster({
     currStage,
     setCurrStage
     }) {
-    console.log(currStage)
     const [currMonster, setCurrMonster] = useState(monsters[Math.floor(currStage/5)])
     const [hp, setHp] = useState(monsters[Math.floor(currStage/5)].hp)
 
     if (monsters.length > 0 && currMonster != undefined) {
         function handleClick() {
             handleAttack()
-            // console.log(hp)
             setHp(hp => hp - playerData.damage)
             if (hp <= 0 || hp <= playerData.damage) {
-                console.log('dead')
                 if (deathCount < 4) {
                     setDeathCount(deathCount => deathCount + 1)
                 } else {
@@ -45,14 +41,9 @@ function Monster({
                     setCurrMonster(monsters[Math.floor(currStage/5)])
                     setCurrGold(playerData.gold + Math.ceil(currMonster.goldDrop * playerData.goldMultiplier))
                     setHp(monsters[Math.floor(currStage/5)].hp)
-                    // window.location.reload()
                 })
-                console.log('currStage:' + currStage)
-                console.log('math floor:' + Math.floor(currStage/5))
             }
-            console.log('hp:' + hp)
         }
-    
         return (
             <div className={shake ? 'monster shake': 'monster'} onClick={handleClick} onAnimationEnd={stopShake}>
                 <div className='hp-outer'>

@@ -31,10 +31,7 @@ function Upgrades({
         currGold={currGold} 
         setCurrGold={setCurrGold}
         currDamage={currDamage}
-        setCurrDamage={setCurrDamage}
-        goldMultiplier={goldMultiplier}
-        setGoldMultiplier={setGoldMultiplier}
-        patchUpgrades={patchUpgrades} />)
+        goldMultiplier={goldMultiplier} />)
 
     return (
         <div className='fight-background'>

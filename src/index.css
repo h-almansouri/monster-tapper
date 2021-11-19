@@ -70,9 +70,6 @@ code {
   border-radius: 100%;
   overflow: hidden;
   text-align: center;
-  /* background-image: url('https://cdn.discordapp.com/attachments/900501298049347625/910072991717670932/cd850e057237e7dff105eb8a3c03ea4d_adobespark.png'); */
-  /* background-color: red; */
-  /* background-size: cover; */
 }
 
 .logout-btn {
@@ -121,7 +118,6 @@ code {
   justify-content: center;
   background-image: url('https://cdn.discordapp.com/attachments/900501298049347625/910313518018994196/loginpage.gif');
   background-repeat: no-repeat;
-  /* background-color: red; */
   background-size: cover;
 }
 
@@ -132,7 +128,6 @@ code {
 }
 
 .login-form input {
-  /* margin-top: 15px; */
   margin-bottom: 15px;
   height: 30px;
   border-radius: 10px;
@@ -181,6 +176,24 @@ code {
   height: 20vh;
   right: 45%;
   margin-top: 35px;
+}
+
+.axe {
+  margin-right: 10%;
+}
+
+.spear {
+  margin-top: 25%;
+  margin-right: 22%;
+}
+
+.show-password {
+  height: 25px;
+  position: fixed;
+  margin-top: 0.3%;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: white;
 }
 
 .monster {

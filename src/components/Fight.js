@@ -4,8 +4,7 @@ import Nav from "./Nav"
 import Player from "./Player"
 import StageInfo from "./StageInfo"
 
-function Fight({playerData, setPlayerData, currGold, setCurrGold, currStage, setCurrStage}) {
-    const {id} = playerData
+function Fight({playerData, setPlayerData, currGold, setCurrGold, currStage, setCurrStage, updatedInfo}) {
     const [monsters, setMonsters] = useState([])
     const [isAttacking, setIsAttacking] = useState(false)
     const [shake, setShake] = useState(false)
@@ -53,7 +52,8 @@ function Fight({playerData, setPlayerData, currGold, setCurrGold, currStage, set
                 <Player 
                     playerData={playerData} 
                     isAttacking={isAttacking} 
-                    setIsAttacking={setIsAttacking} />
+                    setIsAttacking={setIsAttacking}
+                    updatedInfo={updatedInfo} />
                 <Nav />
             </div>
         )

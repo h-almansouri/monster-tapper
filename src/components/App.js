@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Fight from "./Fight";
-import Nav from "./Nav";
 import {Route, Switch} from "react-router-dom"
 import Upgrades from "./Upgrades";
 import Profile from "./Profile";
@@ -9,13 +8,13 @@ import Login from "./Login";
 import Signup from "./Signup";
 
 function App() {
-  const Url = 'http://localhost:3000/users'
   const [playerData, setPlayerData] = useState({
     "email": "",
     "password": "",
     "username": "",
     "avatar": "/images/hero/profile.png",
     "weapon": "/images/hero/sword.png",
+    "weaponName": 'sword',
     "currentStage": 1,
     "damage": 10,
     "gold": 2000,
@@ -30,11 +29,11 @@ function App() {
   const [goldMultiplier, setGoldMultiplier] = useState()
 
   useEffect(() => {
-    console.log(playerData)
       setUpdatedInfo({
         username: playerData.username,
         avatar: playerData.avatar,
-        weapon: playerData.weapon
+        weapon: playerData.weapon,
+        weaponName: playerData.weaponName
       })
       setCurrGold(playerData.gold)
       setCurrStage(playerData.currentStage)
@@ -74,7 +73,8 @@ function App() {
             currGold={currGold} 
             setCurrGold={setCurrGold} 
             currStage={currStage} 
-            setCurrStage={setCurrStage} />
+            setCurrStage={setCurrStage}
+            updatedInfo={updatedInfo} />
         </Route>
         <Route exact path="/upgrades">
           <Upgrades 
@@ -93,7 +93,6 @@ function App() {
         <Route exact path="/profile">
           <Profile 
             playerData={playerData} 
-            setPlayerData={setPlayerData} 
             updatedInfo={updatedInfo} 
             setUpdatedInfo={setUpdatedInfo} />
         </Route>

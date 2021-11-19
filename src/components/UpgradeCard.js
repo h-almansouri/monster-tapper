@@ -1,4 +1,4 @@
-import { useState } from "react/cjs/react.development"
+import { useState } from "react"
 
 function UpgradeCard({
     upgrade, 
@@ -7,10 +7,7 @@ function UpgradeCard({
     currGold, 
     setCurrGold, 
     currDamage, 
-    setCurrDamage, 
-    goldMultiplier,
-    setGoldMultiplier,
-    patchUpgrades}) {
+    goldMultiplier}) {
 
     const [upgradeCost, setUpgradeCost] = useState(upgrade.cost)
     
@@ -35,8 +32,6 @@ function UpgradeCard({
             .then(res => res.json())
             .then(data => {
                 setUpgradeCost(data.cost)
-                console.log('curgold:' + currGold)
-                console.log('datacost:' + upgradeCost)
                 setCurrGold(currGold - upgradeCost)
             })
         } else {

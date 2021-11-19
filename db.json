@@ -1,11 +1,12 @@
 {
   "users": [
     {
-      "email": "test2@email.com",
-      "password": "$2a$10$gtjVgh3230aPKUFT4S5jhOA5folyPnRpJ37.6z3JrkPqgi64hnYVK",
-      "username": "test2",
+      "email": "test3@email.com",
+      "password": "$2a$10$30Zx/GFY4Pr8XVq5qOC5/etfrW/HEOhzhQdrGl4Lz8tSfAQBI9kcq",
+      "username": "test3",
       "avatar": "/images/hero/profile.png",
-      "weapon": "/images/hero/sword.png",
+      "weapon": "/images/hero/spear.png",
+      "weaponName": "spear",
       "currentStage": 1,
       "damage": 10,
       "gold": 2000,

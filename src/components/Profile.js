@@ -1,14 +1,16 @@
-import { useState } from "react"
 import { useHistory } from "react-router"
 import Nav from "./Nav"
 
-function Profile({playerData, setPlayerData, updatedInfo, setUpdatedInfo}) {
+function Profile({playerData, updatedInfo, setUpdatedInfo}) {
     const history = useHistory()
     const {id} = playerData
     const {username, avatar} = updatedInfo
 
     function handleChange(e) {
-        setUpdatedInfo({...updatedInfo, [e.target.name] : e.target.value})
+        setUpdatedInfo({...updatedInfo,
+             [e.target.name] : e.target.value,
+             'weaponName' : e.target.id
+            })
     }
 
     function handleSubmit(e) {
@@ -19,7 +21,7 @@ function Profile({playerData, setPlayerData, updatedInfo, setUpdatedInfo}) {
             body: JSON.stringify(updatedInfo)
         })
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(alert('Profile Updated!'))
     }
 
     function handleLogOut() {
@@ -44,7 +46,7 @@ function Profile({playerData, setPlayerData, updatedInfo, setUpdatedInfo}) {
                         <img className='nav-img' src='/images/hero/sword.png' />
                         <input 
                             type='radio' 
-                            id='weapon1' 
+                            id='sword' 
                             name='weapon' 
                             value='/images/hero/sword.png' 
                             onChange={e => handleChange(e)} >
@@ -52,7 +54,7 @@ function Profile({playerData, setPlayerData, updatedInfo, setUpdatedInfo}) {
                         <img className='nav-img' src='/images/hero/axe.png' />
                         <input 
                             type='radio' 
-                            id='weapon2' 
+                            id='axe' 
                             name='weapon' 
                             value='/images/hero/axe.png'
                             onChange={e => handleChange(e)} >
@@ -60,7 +62,7 @@ function Profile({playerData, setPlayerData, updatedInfo, setUpdatedInfo}) {
                         <img className='nav-img' src='/images/hero/spear.png' />
                         <input 
                             type='radio' 
-                            id='weapon3' 
+                            id='spear' 
                             name='weapon' 
                             value='/images/hero/spear.png' 
                             onChange={e => handleChange(e)} >
