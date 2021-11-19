@@ -5,14 +5,28 @@
       "password": "$2a$10$30Zx/GFY4Pr8XVq5qOC5/etfrW/HEOhzhQdrGl4Lz8tSfAQBI9kcq",
       "username": "test3",
       "avatar": "/images/hero/profile.png",
-      "weapon": "/images/hero/spear.png",
-      "weaponName": "spear",
+      "weapon": "/images/hero/axe.png",
+      "weaponName": "axe",
+      "currentStage": 169,
+      "damage": 458,
+      "gold": 2821425,
+      "goldMultiplier": 31.66486545578804,
+      "image": "/images/hero/hero.png",
+      "id": 1
+    },
+    {
+      "email": "test2@email.com",
+      "password": "$2a$10$x.4yp1zqXTv/tInfYydJd.AqLr8td0Pi.QIsPLPsu0WNqDlU5bN0C",
+      "username": "test2",
+      "avatar": "/images/hero/profile.png",
+      "weapon": "/images/hero/sword.png",
+      "weaponName": "sword",
       "currentStage": 1,
       "damage": 10,
       "gold": 2000,
       "goldMultiplier": 1,
       "image": "/images/hero/hero.png",
-      "id": 1
+      "id": 2
     }
   ],
   "monster": [
@@ -24,73 +38,73 @@
     },
     {
       "id": 2,
-      "hp": 200,
+      "hp": 100,
       "image": "/images/monsters/monster2.png",
-      "goldDrop": 30
+      "goldDrop": 20
     },
     {
       "id": 3,
-      "hp": 300,
+      "hp": 100,
       "image": "/images/monsters/monster3.png",
-      "goldDrop": 40
+      "goldDrop": 20
     },
     {
       "id": 4,
-      "hp": 400,
+      "hp": 100,
       "image": "/images/monsters/monster4.png",
-      "goldDrop": 50
+      "goldDrop": 20
     },
     {
       "id": 5,
-      "hp": 500,
+      "hp": 100,
       "image": "/images/monsters/monster5.png",
-      "goldDrop": 60
+      "goldDrop": 20
     },
     {
       "id": 6,
-      "hp": 600,
+      "hp": 100,
       "image": "/images/monsters/monster6.png",
-      "goldDrop": 70
+      "goldDrop": 20
     },
     {
       "id": 7,
-      "hp": 700,
+      "hp": 100,
       "image": "/images/monsters/monster7.png",
-      "goldDrop": 80
+      "goldDrop": 20
     },
     {
       "id": 8,
-      "hp": 800,
+      "hp": 100,
       "image": "/images/monsters/monster8.png",
-      "goldDrop": 90
+      "goldDrop": 20
     },
     {
       "id": 9,
-      "hp": 900,
+      "hp": 100,
       "image": "/images/monsters/monster9.png",
-      "goldDrop": 100
+      "goldDrop": 20
     },
     {
       "id": 10,
-      "hp": 1000,
+      "hp": 100,
       "image": "/images/monsters/monster10.png",
-      "goldDrop": 110
+      "goldDrop": 20
     }
   ],
   "upgrades": [
     {
       "id": 1,
       "name": "Damage Multiplier",
-      "description": "Multiplies your damage by 20% forever",
-      "multiplier": 1.2,
-      "cost": 100
+      "description": "Multiplies your damage by 40% forever",
+      "multiplier": 1.4,
+      "cost": 65880
     },
     {
       "id": 2,
       "name": "Gold Multiplier",
-      "description": "Multiplies your gold drops by 20% forever",
-      "multiplier": 1.2,
-      "cost": 200
+      "description": "Multiplies your gold drops by 30% forever",
+      "multiplier": 1.3,
+      "cost": 87660
     }
   ],
   "weapons": [

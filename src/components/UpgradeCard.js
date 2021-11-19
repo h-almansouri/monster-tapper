@@ -27,7 +27,7 @@ function UpgradeCard({
             fetch(`http://localhost:3000/upgrades/${upgrade.id}`, {
                 method: 'PATCH',
                 headers: {'Content-Type' : 'application/json'},
-                body: JSON.stringify({cost : Math.ceil(upgradeCost * 2.5)})
+                body: JSON.stringify({cost : Math.ceil(upgradeCost * 1.5)})
             })
             .then(res => res.json())
             .then(data => {

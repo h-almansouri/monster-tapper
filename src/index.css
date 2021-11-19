@@ -102,11 +102,21 @@ code {
 }
 
 .gold {
-  position: absolute;
+  position: relative;
   height: 30px;
   width: 30px;
-  right: 80px;
+  /* right: 80px; */
   margin-top: 7px;
+}
+
+.gold-count {
+  position: relative
+}
+
+.gold-container {
+  position: relative;
+  display: flex;
+  /* justify-content: space-between; */
 }
 
 .login {
