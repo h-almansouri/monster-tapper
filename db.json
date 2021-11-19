@@ -1,41 +1,17 @@
 {
   "users": [
     {
-      "id": 1,
-      "username": "default",
-      "email": "defualtEmail@mail.com",
-      "password": "default",
-      "avatar": "/images/hero/profile.png",
-      "weapon": "/images/hero/sword.png",
-      "currentStage": 1,
-      "damage": 10,
-      "gold": 2000,
-      "goldMultiplier": 1,
-      "image": "/images/hero/hero.png"
-    },
-    {
-      "email": "test@email.com",
-      "password": "$2a$10$FFKhvwkrHJFMT893sof1GecGp/9Q4iz3iuhb3a/4fS4iDIPE0xhv.",
-      "username": "test",
-      "avatar": "/images/hero/profile.png",
-      "weapon": "/images/hero/sword.png",
-      "currentStage": 1,
-      "damage": 10,
-      "gold": 2000,
-      "image": "/images/hero/hero.png",
-      "id": 2
-    },
-    {
       "email": "test2@email.com",
-      "password": "$2a$10$LtvweLklXfm3dDjq/cYRUu89UKvmfoi8y3nhAA4mRydSpEnQ..ds6",
+      "password": "$2a$10$gtjVgh3230aPKUFT4S5jhOA5folyPnRpJ37.6z3JrkPqgi64hnYVK",
       "username": "test2",
       "avatar": "/images/hero/profile.png",
       "weapon": "/images/hero/sword.png",
       "currentStage": 1,
       "damage": 10,
       "gold": 2000,
+      "goldMultiplier": 1,
       "image": "/images/hero/hero.png",
-      "id": 3
+      "id": 1
     }
   ],
   "monster": [

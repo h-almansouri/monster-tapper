@@ -13,6 +13,7 @@ function Signup() {
         currentStage: 1,
         damage: 10,
         gold: 2000,
+        goldMultiplier: 1,
         image: "/images/hero/hero.png"
     })
 
@@ -28,7 +29,6 @@ function Signup() {
     }
 
     function handleChange(e) {
-        console.log(e.target.value)
         setFormData({...formData, [e.target.name] : e.target.value})
     }
     return (
@@ -38,9 +38,7 @@ function Signup() {
                     <input type='text' placeholder='Username' value={formData.username} name='username' onChange={e => handleChange(e)} ></input>
                     <input type='text' placeholder='Email' value={formData.email} name='email' onChange={e => handleChange(e)} ></input>
                     <input type='text' placeholder='Password' value={formData.password} name='password' onChange={e => handleChange(e)} ></input>
-                    {/* <Link className='login-btn' to="/login"> */}
                         <button className='login-btn' type='submit'>Sign Up</button>
-                    {/* </Link> */}
                 </form>
             </div>
         </div>

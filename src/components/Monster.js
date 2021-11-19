@@ -36,14 +36,14 @@ function Monster({
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify({
                         currentStage: playerData.currentStage + 1,
-                        gold: playerData.gold + currMonster.goldDrop
+                        gold: playerData.gold + Math.ceil(currMonster.goldDrop * playerData.goldMultiplier)
                       })
                 })
                 .then(res => res.json())
                 .then(data => {
                     patchPlayerData(data)
                     setCurrMonster(monsters[Math.floor(currStage/5)])
-                    setCurrGold(playerData.gold + currMonster.goldDrop)
+                    setCurrGold(playerData.gold + Math.ceil(currMonster.goldDrop * playerData.goldMultiplier))
                     setHp(monsters[Math.floor(currStage/5)].hp)
                     // window.location.reload()
                 })

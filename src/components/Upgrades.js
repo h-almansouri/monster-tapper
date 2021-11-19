@@ -10,7 +10,11 @@ function Upgrades({
     currGold,
     setCurrGold,
     currDamage,
-    setCurrDamage}) {
+    setCurrDamage,
+    goldMultiplier,
+    setGoldMultiplier,
+    patchUpgrades
+    }) {
     const [upgrades, setUpgrades] = useState([])
 
     useEffect(() => {
@@ -19,7 +23,18 @@ function Upgrades({
         .then(data => setUpgrades(data))
     }, [])
 
-    const upgradesList = upgrades.map(upgrade => <UpgradeCard key={upgrade.id} upgrade={upgrade} />)
+    const upgradesList = upgrades.map(upgrade => <UpgradeCard 
+        key={upgrade.id} 
+        playerData={playerData}
+        upgrade={upgrade} 
+        setPlayerData={setPlayerData} 
+        currGold={currGold} 
+        setCurrGold={setCurrGold}
+        currDamage={currDamage}
+        setCurrDamage={setCurrDamage}
+        goldMultiplier={goldMultiplier}
+        setGoldMultiplier={setGoldMultiplier}
+        patchUpgrades={patchUpgrades} />)
 
     return (
         <div className='fight-background'>
