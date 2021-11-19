@@ -13,6 +13,16 @@ function Profile({playerData, updatedInfo, setUpdatedInfo}) {
             })
     }
 
+    function handleDelete () {
+        fetch(`http://localhost:3000/users/${id}`, {
+            method: 'DELETE',
+            headers: {'Content-Type': 'application/json'},
+        })
+        .then(res => res.json())
+        .then(alert('Profile Deleted!'))
+        history.push('/')
+    }
+
     function handleSubmit(e) {
         e.preventDefault()
         fetch(`http://localhost:3000/users/${id}`, {
@@ -31,6 +41,7 @@ function Profile({playerData, updatedInfo, setUpdatedInfo}) {
     return (
         <div className='fight-background'>
             <div className='formbox'>
+                <button className="delete-btn" onClick={handleDelete}>Delete Account</button>
                 <button className='logout-btn' onClick={handleLogOut}>Log Out</button>
                 <img className='prof-pic' alt='Broken image link' src={avatar} />
                 <br />

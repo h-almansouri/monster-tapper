@@ -79,6 +79,13 @@ code {
   margin-top: 2%;
 }
 
+.delete-btn {
+  display: flex;
+  position: absolute;
+  margin-right: 22%;
+  margin-top: 2%;
+}
+
 .armory {
   display: flex;
 }
