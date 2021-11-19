@@ -7,9 +7,9 @@
       "avatar": "/images/hero/profile.png",
       "weapon": "/images/hero/axe.png",
       "weaponName": "axe",
-      "currentStage": 169,
+      "currentStage": 170,
       "damage": 458,
-      "gold": 2821425,
+      "gold": 2875256,
       "goldMultiplier": 31.66486545578804,
       "image": "/images/hero/hero.png",
       "id": 1
@@ -21,9 +21,9 @@
       "avatar": "/images/hero/profile.png",
       "weapon": "/images/hero/sword.png",
       "weaponName": "sword",
-      "currentStage": 1,
+      "currentStage": 13,
       "damage": 10,
-      "gold": 2000,
+      "gold": 2900,
       "goldMultiplier": 1,
       "image": "/images/hero/hero.png",
       "id": 2
